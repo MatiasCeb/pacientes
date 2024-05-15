@@ -13,6 +13,8 @@ public interface IPacienteService {
 
     public Paciente findPaciente(Long id);
 
-    public void editPaciente(Paciente pac);
+    public void editPaciente(Long id, Paciente pac);
+
+    public Paciente findPacienteByDni(String dni);
 
 }

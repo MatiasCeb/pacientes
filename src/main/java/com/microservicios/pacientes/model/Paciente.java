@@ -1,12 +1,10 @@
 package com.microservicios.pacientes.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter @Setter
@@ -19,6 +17,7 @@ public class Paciente {
     private String dni;
     private String nombre;
     private String apellido;
+    @Temporal(TemporalType.DATE)
     private Date fechaNac;
     private String telefono;
 

@@ -3,9 +3,11 @@ package com.microservicios.pacientes.service;
 import com.microservicios.pacientes.model.Paciente;
 import com.microservicios.pacientes.repository.IPacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class PacienteService implements IPacienteService {
 
     @Autowired
@@ -32,7 +34,12 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public void editPaciente(Paciente pac) {
+    public void editPaciente(Long id, Paciente pac) {
         this.savePaciente(pac);
+    }
+
+    @Override
+    public Paciente findPacienteByDni(String dni) {
+        return null;
     }
 }
